@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #17324d, #1594b8);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.page-header h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  transition: .3s ease ;
+}
+
+.page-header h1:hover{
+  transform: translateY(-5px);
+}
+
+.page-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 45px 20px;
+}
+
+.products-section,
+.cards-section {
+  margin-bottom: 55px;
+}
+
+.section-title {
+  text-align: center;
+  color: #17324d;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.product-container,
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card,
+.custom-card {
+  background: white;
+  border-radius: 15px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(23, 50, 77, 0.1);
+  border: 1px solid #e5eaf0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover,
+.custom-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(23, 50, 77, 0.16);
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card h2,
+.custom-card h2 {
+  color: #17324d;
+  margin-bottom: 18px;
+}
+
+.price {
+  color: #1594b8;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.out-stock {
+  color: #d9534f;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.available,
+.unavailable {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.available {
+  color: #176b4d;
+  background: #e4f6ee;
+}
+
+.unavailable {
+  color: #a33a37;
+  background: #fde9e8;
+}
+
+.product-image {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.cards-section {
+  padding: 20px 0 50px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-card {
+  width: 420px;
+  max-width: 100%;
+  background: rgba(189, 205, 223, 0.226);
+  padding: 35px 30px;
+  border-radius: 22px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 40px rgba(23, 50, 77, 0.12);
+  transition: 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(23, 50, 77, 0.18);
+}
+
+.custom-card h2 {
+  color: #1f5b96;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 135px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #2a2b7a;
+  padding: 4px;
+  margin-bottom: 18px;
+}
+
+.card-content h3 {
+  color: #17324d;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.profile-skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 25px;
+}
+
+.profile-skills span {
+  background: #e8f6fa;
+  color: #17324d;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #ccecf3;
+  transition: 0.3s ease;
+}
+
+.profile-skills span:hover {
+  background: #1594b8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.card-content button {
+  background: #17324d;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card-content button:hover {
+  background: #1594b8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .custom-card {
+    padding: 28px 20px;
+  }
+
+  .profile-image {
+    width: 115px;
+    height: 115px;
+  }
+
+  .custom-card h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .product-container,
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header h1 {
+    font-size: 30px;
+  }
+
+  main {
+    padding: 35px 15px;
+  }
+}
